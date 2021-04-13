@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      <%= if content_for?(:title) then yield(:title) + ' | ' end %>
+      From Fail to Fuel
+    </title>
+    <%= if content_for?(:head) then yield(:head) end %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= include_gon %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_pack_tag :application %>
+    <%#= favicon_link_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- favicons -->
+
+  </head>
+
+  <body>
+
+
+    <div class="non-footer">
+      <%= render 'layouts/notifications' %>
+      <%= render 'layouts/navbar' %>
+      <%= render 'layouts/sidenav' %>
+      <%= render 'layouts/footer' %>
+      <%= yield %>
+    </div>
+
+    <%= render 'layouts/footer' %>
+    <%= yield :additional_js %>
+
+  </body>
+</html>
