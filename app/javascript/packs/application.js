@@ -10,11 +10,17 @@ import "channels"
 Rails.start()
 ActiveStorage.start()
 
-//= require jquery3
+
+//= require jquery
 //= require jquery_ujs
 //= require jquery-ui
-//= require popper
+//= require_tree .
 //= require bootstrap
+
+//= require popper
 //= require activestorage
 //= require font_awesome5
 //= require tinymce
+
+window.jQuery = $;
+window.$ = $;
