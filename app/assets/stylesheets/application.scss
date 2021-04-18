@@ -10,37 +10,35 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
-  *= require_tree .
-  *= require_self
-  */
+ *= require_tree .
+ *= require_self
+*/
 
-   @import 'bootstrap';
-   @import 'font_awesome5';
-   @import 'font_awesome5_webfont';
-   @import 'font_awesome5.css';
-
-
- $color-red: #cb2026;
- $color-grey-dark: #333333;
- $color-grey-light: #c0c0c0;
+@import 'bootstrap';
+@import 'font_awesome5';
+@import 'font_awesome5_webfont';
+@import 'font_awesome5.css';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
 
+$color-red: #cb2026;
+$color-grey-dark: #333333;
+$color-grey-light: #c0c0c0;
+$color-black: #000000;
+$color-white: #ffffff;
+
+$font-sans: 'Open Sans', sans-serif;
+
+$z-depth-1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+$z-depth-2: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+$z-depth-3: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+$z-depth-4: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+$z-depth-5: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 
 
-  /*-----------------------------
-  ------------BASICS-------------
-  -----------------------------*/
-
-
-
-
-
-
-
-  /*-----------------------------
-  --------------TEXT-------------
-  -----------------------------*/
-
+/*-----------------------------
+------------BASICS-------------
+-----------------------------*/
 
 
 
@@ -48,9 +46,24 @@
 
 
 
-  /*-----------------------------
-  ------------COLORS-------------
-  -----------------------------*/
+/*-----------------------------
+--------------TEXT-------------
+-----------------------------*/
+
+* { font-family: $font-sans; font-weight: 300; }
+h1 {  }
+h2 {  }
+h3 {  }
+h4 {  }
+h5 {  }
+p {  }
+
+
+
+
+/*-----------------------------
+------------COLORS-------------
+-----------------------------*/
 
 
 
@@ -58,6 +71,78 @@
 
 
 
+
+
+
+
+/*-----------------------------
+------------BUTTONS------------
+-----------------------------*/
+
+.btn {
+  box-shadow: $z-depth-1;
+  color: $color-white;
+  border-radius: 0px;
+}
+
+.btn:hover {
+  box-shadow: $z-depth-3;
+  color: $color-white;
+}
+
+.btn-red {
+  background-color: $color-red;
+}
+
+.not-button {
+  background: transparent;
+  color: $color-black;
+  border: none;
+}
+
+
+
+
+
+/*-----------------------------
+----------NOTIFICATIONS--------
+-----------------------------*/
+
+.alert {
+  margin-bottom: 0;
+  border-radius: 0;
+  border: none;
+}
+
+.alert button {
+  background: transparent;
+  border: none;
+  color: black;
+}
+
+
+
+
+/*-----------------------------
+--------DESIGN-ELEMENTS--------
+-----------------------------*/
+
+.floating-box {
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: $z-depth-3;
+}
+
+
+
+
+
+
+/*-----------------------------
+------------SIDENAV------------
+-----------------------------*/
 
   #wrapper {
     overflow-x: hidden;

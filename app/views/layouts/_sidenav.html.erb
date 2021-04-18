@@ -1,12 +1,16 @@
 <!-- Sidebar -->
 <div class="bg-light border-right" id="sidebar-wrapper">
-  <div class="sidebar-heading">Logo Here</div>
+  <div class="sidebar-heading">
+    <%= link_to root_path do %>
+      <%= image_tag "Logo.png", style: "width: 200px" %>
+    <% end %>
+  </div>
   <div class="list-group list-group-flush">
-    <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-    <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
-    <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
-    <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
-    <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
+    <%= link_to "Home", root_path, class: "list-group-item list-group-item-action bg-light" %>
+    <a href="#" class="list-group-item list-group-item-action bg-light">About Failure</a>
+    <a href="#" class="list-group-item list-group-item-action bg-light">The Research</a>
+    <a href="#" class="list-group-item list-group-item-action bg-light">Tools</a>
+    <a href="#" class="list-group-item list-group-item-action bg-light">Reprogram Yourself</a>
     <% if !current_user %>
       <%= link_to new_user_registration_path, class: "list-group-item list-group-item-action bg-light" do %>
         Create an Account
@@ -15,7 +19,7 @@
         Login
       <% end %>
     <% else %>
-      <%= link_to new_user_session_path, class: "list-group-item list-group-item-action bg-light" do %>
+      <%= link_to user_path(current_user), class: "list-group-item list-group-item-action bg-light" do %>
         My Account
       <% end %>
     <% end %>

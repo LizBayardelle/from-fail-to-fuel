@@ -29,6 +29,7 @@ gem 'friendly_id', '~> 5.2.0'
 gem 'tinymce-rails'
 gem 'invisible_captcha'
 gem 'figaro'
+gem 'sassc' # Needed for Figaro
 gem 'high_voltage', '~> 3.1'
 
 # FOR IMAGES

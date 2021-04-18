@@ -1,0 +1,35 @@
+<main class="container pt-5 mt-5">
+  <section class="floating-box p-5">
+
+    <h2 class="text-center">Log in</h2>
+
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-inputs">
+        <div class="form-group pt-3">
+          <%= f.label "Email"%>
+          <%= f.text_field :email,
+                    class: "form-control",
+                    required: false,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" } %>
+        </div> <!-- form-group -->
+        <div class="form-group pt-3">
+          <%= f.label "Password"%>
+          <%= f.password_field :password,
+                    class: "form-control",
+                    required: false,
+                    input_html: { autocomplete: "current-password" } %>
+        </div> <!-- form-group -->
+        <div class="form-group pt-3">
+          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        </div> <!-- form-group -->
+      </div>
+
+      <div class="form-actions text-center mt-3">
+        <%= f.button :submit, "Log In", class: "btn btn-red mb-3" %><br>
+        <%= render "devise/shared/links" %>
+      </div>
+    <% end %>
+
+  </section>
+</main>
