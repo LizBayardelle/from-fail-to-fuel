@@ -1,12 +1,12 @@
 <!-- Sidebar -->
 <div class="bg-light border-right" id="sidebar-wrapper">
   <div class="sidebar-heading">
-    <%= link_to root_path do %>
+    <%= link_to home_index_path do %>
       <%= image_tag "Logo.png", style: "width: 200px" %>
     <% end %>
   </div>
   <div class="list-group list-group-flush">
-    <%= link_to "Home", root_path, class: "list-group-item list-group-item-action bg-light" %>
+    <%= link_to "Home", home_index_path, class: "list-group-item list-group-item-action bg-light" %>
     <a href="#" class="list-group-item list-group-item-action bg-light">About Failure</a>
     <a href="#" class="list-group-item list-group-item-action bg-light">The Research</a>
     <a href="#" class="list-group-item list-group-item-action bg-light">Tools</a>

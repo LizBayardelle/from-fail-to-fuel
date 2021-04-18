@@ -51,12 +51,25 @@ $z-depth-5: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 -----------------------------*/
 
 * { font-family: $font-sans; font-weight: 300; }
-h1 {  }
+h1 { font-weight: 300; }
 h2 {  }
 h3 {  }
 h4 {  }
 h5 {  }
 p {  }
+
+.thin { font-weight: 300; }
+.bold { font-weight: 700; }
+.boldest { font-weight: 800; }
+
+.narrow { margin-left: auto; margin-right: auto; }
+@media only screen and (min-width: 768px) { .narrow { width: 70%; } }
+@media only screen and (min-width: 1100px) { .narrow { width: 50%; } }
+
+h1.big, .h1.big { font-size: calc(1.375rem + 4.5vw) }
+@media only screen and (min-width: 1100px) {
+  h1.big, .h1.big { font-size: 5rem; }
+}
 
 
 
@@ -65,7 +78,11 @@ p {  }
 ------------COLORS-------------
 -----------------------------*/
 
-
+.color-red { color: $color-red; }
+.color-grey-dark { color: $color-grey-dark; }
+.color-grey-light { color: $color-grey-light; }
+.color-black { color: $color-black; }
+.color-white { color: $color-white; }
 
 
 
