@@ -13,7 +13,7 @@ Rails.application.configure do
   config.eager_load = true
 
   # For Devise
-  config.action_mailer.default_url_options = { :host => "failtofuel.com" }
+  config.action_mailer.default_url_options = { :host => "thefailureproject.org" }
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
@@ -63,7 +63,7 @@ Rails.application.configure do
 
   # Use a real queuing backend for Active Job (and separate queues per environment).
   # config.active_job.queue_adapter     = :resque
-  # config.active_job.queue_name_prefix = "FTF_production"
+  # config.active_job.queue_name_prefix = "TFP_production"
 
   config.action_mailer.perform_caching = false
 
