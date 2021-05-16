@@ -25,14 +25,17 @@
     <main class="container">
 
       <header class="text-center my-5">
-        <%= image_tag "Logo.png", style: "width: 300px" %><br>
+        <%= image_tag "Logo.png", style: "width: 250px" %><br>
       </header>
 
       <h1 class="pb-5 text-center narrow big">
         It is impossible to succeed without failing.
       </h1>
       <h3 class="mb-5 text-center narrow bold color-red">
-        Learn how to weaponize good failures to prevent catastrophic failure and guarantee success.
+        Learn how to
+        <br>weaponize good failures
+        <br>to prevent catastrophic failure
+        <br>and guarantee success.
       </h3>
 
 
@@ -93,7 +96,7 @@
 
 
       <footer class="text-center my-5">
-        <%= image_tag "Logo.png", style: "width: 300px; margin-bottom: 2rem" %><br>
+        <%= image_tag "Logo.png", style: "width: 250px; margin-bottom: 2rem" %><br>
         <% if current_user && current_user.admin %>
           <%= link_to "Home Page", home_index_path %>
         <% else %>

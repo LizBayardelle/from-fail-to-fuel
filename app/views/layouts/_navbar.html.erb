@@ -11,14 +11,11 @@
   </button>
   <div class="collapse navbar-collapse me-4" id="navbarNav">
     <ul class="navbar-nav ms-auto">
-      <li class="nav-item active">
-        <%= link_to "Home", home_index_path, class: "nav-link" %>
+      <li class="nav-item">
+        <%= link_to "About Failure", page_path("failure"), class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Blog</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Tools</a>
+        <a class="nav-link" href="#">The Research</a>
       </li>
       <li class="nav-item ms-2">
         <a class="btn btn-sm mt-1 btn-red" href="#">Failproof Yourself</a>
@@ -35,14 +32,14 @@
 
 <script>
   $( document ).ready(function() {
-    if ( window.screen.width <= 768 ) {
+    if ( window.screen.width <= 1100 ) {
       $("#menu-toggle").text("❯");
     }
     $("#menu-toggle").click(function() {
       if ( $("#wrapper").hasClass("toggled") ) {
-        $("#menu-toggle").text("❯");
-      } else {
         $("#menu-toggle").text("❮");
+      } else {
+        $("#menu-toggle").text("❯");
       }
     });
   });
