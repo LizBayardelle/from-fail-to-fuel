@@ -23,6 +23,7 @@
 
 $color-red: #cb2026;
 $color-grey-dark: #333333;
+$color-grey-mid: #aaa;
 $color-grey-light: #f8f9fa;
 $color-black: #000000;
 $color-white: #ffffff;
@@ -265,22 +266,12 @@ footer.nb-footer .about {
   text-align: center;
 }
 footer.nb-footer .about p {
-  font-size: 13px;
+  font-size: 14px;
   color: $color-black;
   margin-top: 30px;
 }
 footer.nb-footer .about .social-media {
   margin-top: 15px;
-}
-footer.nb-footer .about .social-media ul li a, footer.nb-footer .about .social-media ul li a i {
-  display: inline-block;
-  width: 45px;
-  height: 45px;
-  line-height: 45px;
-  border-radius: 50%;
-  font-size: 16px;
-  color: $color-red;
-  border: 1px solid rgba(0, 0, 0, 0.3);
 }
 footer.nb-footer .about .social-media ul li a:hover {
   background: $color-red;
@@ -291,15 +282,28 @@ footer.nb-footer .footer-info-single {
   margin-top: 30px;
 }
 footer.nb-footer .footer-info-single .title {
-  color: #aaa;
+  color: $color-grey-mid;
   text-transform: uppercase;
   font-size: 16px;
   border-left: 4px solid $color-red;
   padding-left: 5px;
 }
+
+footer.nb-footer .about .social-media ul li a {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 50%;
+  font-size: 16px;
+  color: $color-red;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  margin: 0 10px;
+}
+
 footer.nb-footer .footer-info-single ul li a {
   display: block;
-  color: #aaa;
+  color: $color-grey-mid;
   padding: 2px 0;
 }
 footer.nb-footer .footer-info-single ul li a:hover {
@@ -308,7 +312,7 @@ footer.nb-footer .footer-info-single ul li a:hover {
 footer.nb-footer .footer-info-single p {
   font-size: 13px;
   line-height: 20px;
-  color: #aaa;
+  color: $color-grey-mid;
 }
 footer.nb-footer .copyright {
   margin-top: 15px;
