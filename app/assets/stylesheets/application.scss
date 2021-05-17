@@ -23,7 +23,7 @@
 
 $color-red: #cb2026;
 $color-grey-dark: #333333;
-$color-grey-mid: #aaa;
+$color-grey-mid: #c0c0c0;
 $color-grey-light: #f8f9fa;
 $color-black: #000000;
 $color-white: #ffffff;
@@ -53,7 +53,7 @@ $z-depth-5: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 
 * { font-family: $font-sans; font-weight: 300; }
 h1 { font-weight: 300; }
-h2 {  }
+h2 { font-weight: 300; font-size: 3rem; }
 h3 {  }
 h4 {  }
 h5 {  }
@@ -149,6 +149,7 @@ h1.big, .h1.big { font-size: calc(1.375rem + 4.5vw) }
 
 .floating-box {
   width: 100%;
+  background-color: $color-white;
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
@@ -174,6 +175,13 @@ h1.big, .h1.big { font-size: calc(1.375rem + 4.5vw) }
     .container { display: flex; flex-flow: column; }
     .order-md-first { order: 1; }
     .order-md-last { order: 2; }
+}
+
+.red-stripe {
+  background-color: $color-red;
+  color: $color-white;
+  padding: 20px;
+  width: 100%;
 }
 
 
@@ -282,7 +290,7 @@ footer.nb-footer .footer-info-single {
   margin-top: 30px;
 }
 footer.nb-footer .footer-info-single .title {
-  color: $color-grey-mid;
+  color: $color-black;
   text-transform: uppercase;
   font-size: 16px;
   border-left: 4px solid $color-red;
@@ -303,7 +311,7 @@ footer.nb-footer .about .social-media ul li a {
 
 footer.nb-footer .footer-info-single ul li a {
   display: block;
-  color: $color-grey-mid;
+  color: $color-black;
   padding: 2px 0;
 }
 footer.nb-footer .footer-info-single ul li a:hover {
@@ -312,7 +320,7 @@ footer.nb-footer .footer-info-single ul li a:hover {
 footer.nb-footer .footer-info-single p {
   font-size: 13px;
   line-height: 20px;
-  color: $color-grey-mid;
+  color: $color-black;
 }
 footer.nb-footer .copyright {
   margin-top: 15px;
