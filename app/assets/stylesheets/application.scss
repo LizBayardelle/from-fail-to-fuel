@@ -22,6 +22,7 @@
 
 
 $color-red: #cb2026;
+$color-red-dark: #9f191e;
 $color-grey-dark: #333333;
 $color-grey-mid: #c0c0c0;
 $color-grey-light: #f8f9fa;
@@ -72,7 +73,8 @@ h1.big, .h1.big { font-size: calc(1.375rem + 4.5vw) }
   h1.big, .h1.big { font-size: 5rem; }
 }
 
-
+p a { color: $color-red; text-decoration: none; }
+p a:hover { color: $color-red-dark; }
 
 
 
@@ -89,6 +91,11 @@ h1.big, .h1.big { font-size: calc(1.375rem + 4.5vw) }
 
 
 .bg-light { background-color: $color-grey-light; }
+.bg-red { background-color: $color-red; }
+.bg-grey-dark { background-color: $color-grey-dark; }
+.bg-grey-light { background-color: $color-grey-light; }
+.bg-black { background-color: $color-black; }
+.bg-white { background-color: $color-white; }
 
 
 
@@ -225,6 +232,7 @@ h1.big, .h1.big { font-size: calc(1.375rem + 4.5vw) }
 
 #sidebar-wrapper .list-group {
   width: 15rem;
+  overflow-y: scroll;
 }
 
 #page-content-wrapper {

@@ -24,5 +24,19 @@
       <% end %>
     <% end %>
   </div>
+
+  <% if current_user && current_user.admin %>
+    <h4 class="mb-0 mt-4">&nbsp;&nbsp;ADMIN AREA</h4>
+    <div class="list-group list-group-flush">
+      <% unread_messages = Contact.where(responded: false, archived: false) %>
+      <%= link_to contacts_path, class: "list-group-item list-group-item-action bg-light" do %>
+        Messages
+        <% if unread_messages.count != 0 %>
+          <span class="badge bg-red color-white"><%= unread_messages.count %>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+
 </div>
-<!-- /#sidebar-wrapper -->
+<!-- sidebar-wrapper -->

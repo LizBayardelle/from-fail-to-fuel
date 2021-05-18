@@ -1,0 +1,31 @@
+<h5 id="message<%= m.id %>header" class="mb-0 mt-3" style="cursor: pointer">
+  <% if m.responded == true %>
+    <i class="far fa-circle color-red mr-2"></i>
+  <% else %>
+    <i class="fas fa-circle color-red mr-2"></i>
+  <% end %>
+  From <%= m.name %> on <%= m.created_at.strftime("%b %e, %Y") %>
+</h5>
+<div id="message<%= m.id %>div" class="mb-4 pl-4">
+  <p class="normal-weight mb-1"><%= m.message %></p>
+  <p class="mb-1" style="line-height: 1"><strong>
+    <% if m.email != "" %>
+      <a href="mailto:<%= m.email %>"><%= m.email %></a>
+    <% end %>
+  </strong></p>
+  <p class="mb-0" style="line-height: 1"><small><em>
+    <% if m.responded == true %>
+      <%= link_to "Mark as Unread", mark_unresponded_path(m), method: :post %>
+    <% else %>
+      <%= link_to "Mark as Responded", mark_responded_path(m), method: :post %>
+    <% end %>
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <% if m.archived == true %>
+      <%= link_to "Bring Back from Archives", mark_unarchived_path(m), method: :post %>
+    <% else %>
+      <%= link_to "Mark as Archived", mark_archived_path(m), method: :post %>
+    <% end %>
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <%= link_to "Delete Forever", contact_path(m), data: { confirm: "Are you sure?  This is mucho permanent." }, method: :delete %>
+  </em></small></p>
+</div>

@@ -1,0 +1,17 @@
+toolbar:
+  - styleselect | bold italic underline strikethrough | indent outdent | alignleft aligncenter alignright alignjustify | blockquote | uploadimage image | link anchor | code codeformat codesample | bullist numlist checklist
+  - code | undo redo
+plugins:
+  - code
+  - image
+  - link
+  - lists
+  - advlist
+  - codesample
+  - textcolor
+  - uploadimage
+menubar:
+  - view
+  - format
+  - table
+  - tools

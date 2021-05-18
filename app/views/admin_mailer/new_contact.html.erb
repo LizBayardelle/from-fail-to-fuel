@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+
+  <body>
+    <hr style="border: 0; border-top: solid 2px #cb2026;" />
+    <h1 style="text-align: center"><%= @contact.name %> Sent a Message</h1>
+    <hr style="border: 0; border-top: solid 2px #cb2026; margin-bottom: 25px" />
+    <p>
+      From: <%= @contact.name %>
+          (<% if @contact.email != "" %>
+            <a href="mailto:<%= @contact.email %>"><%= @contact.email %></a>
+          <% end %>
+          )
+    </p>
+    <p>
+      <%= @contact.message %>
+    </p>
+    <hr style="border: 0; border-top: solid 2px #cb2026; margin-top: 25px" />
+    <img src="https://thefailureproject.s3-us-west-1.amazonaws.com/111+-+Site+Images/TFP+Logo+(Square).png" style="width: 300px; display: block; margin-right: auto; margin-left: auto">
+    <hr style="border: 0; border-top: solid 2px #cb2026;" />
+  </body>
+
+</html>

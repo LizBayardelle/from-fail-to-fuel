@@ -1,0 +1,51 @@
+<main class="container py-5">
+
+  <header class="text-center">
+    <h1 class="big mb-0">Admin Dashboard</h1>
+    <p class="narrow">Here's where all the magic happens.</p>
+  </header>
+
+  <section class="pt-0">
+    <h2 class="line-height-1">New Messages</h2>
+    <% @contacts.each do |m| %>
+      <%= render partial: "contacts/contact_box", locals: { m: m } %>
+    <% end %>
+
+    <h2 class="mt-4 line-height-1">Messages Already Answered</h2>
+    <% @old_contacts.each do |m| %>
+      <%= render partial: "contacts/contact_box", locals: { m: m } %>
+    <% end %>
+
+    <h2 class="mt-4 line-height-1">Archived Messages</h2>
+    <% @archived_contacts.each do |m| %>
+      <%= render partial: "contacts/contact_box", locals: { m: m } %>
+    <% end %>
+
+  </section>
+
+</main>
+
+
+<script>
+  $( document ).ready(function() {
+
+    <% @contacts.each do |m| %>
+      $('#message<%= m.id %>header').click(function(){
+        $('#message<%= m.id %>div').toggleClass("hidden");
+      });
+    <% end %>
+
+    <% @old_contacts.each do |m| %>
+      $('#message<%= m.id %>header').click(function(){
+        $('#message<%= m.id %>div').toggleClass("hidden");
+      });
+    <% end %>
+
+    <% @archived_contacts.each do |m| %>
+      $('#message<%= m.id %>header').click(function(){
+        $('#message<%= m.id %>div').toggleClass("hidden");
+      });
+    <% end %>
+
+  });
+</script>
