@@ -61,7 +61,7 @@ p {  }
 
 .thin { font-weight: 300; }
 .bold { font-weight: 700; }
-.boldest { font-weight: 800; }
+.boldest, strong { font-weight: 800; }
 
 .narrow { margin-left: auto; margin-right: auto; }
 @media only screen and (min-width: 768px) { .narrow { width: 70%; } }
@@ -184,6 +184,18 @@ h1.big, .h1.big { font-size: calc(1.375rem + 4.5vw) }
   width: 100%;
 }
 
+.about .social-media ul li a {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 50%;
+  font-size: 16px;
+  color: $color-red;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+
 
 
 
@@ -297,7 +309,7 @@ footer.nb-footer .footer-info-single .title {
   padding-left: 5px;
 }
 
-footer.nb-footer .about .social-media ul li a {
+footer.nb-footer .about .social-media ul li a, .about-liz.nb-footer .about .social-media ul li a {
   display: inline-block;
   width: 45px;
   height: 45px;
