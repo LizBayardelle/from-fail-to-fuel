@@ -13,8 +13,8 @@ Rails.application.configure do
   config.eager_load = true
 
   # For Devise
-  config.action_mailer.default_url_options = { :host => "http://www.thefailureproject.org" }
-  config.action_mailer.smtp_settings = { address: "http://www.thefailureproject.org" }
+  config.action_mailer.default_url_options = { :host => "thefailureproject.org" }
+  config.action_mailer.smtp_settings = { address: "thefailureproject.org" }
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
