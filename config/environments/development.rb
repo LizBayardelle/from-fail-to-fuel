@@ -37,8 +37,8 @@ Rails.application.configure do
      :address => 'smtp.sendgrid.net',
      :port => '587',
      :authentication => :plain,
-     :user_name => Rails.application.credentials.dig(:user_name),
-     :password => Rails.application.credentials.dig(:password),
+     :user_name => 'apikey',
+     :password => ENV["SENDGRID_PASSWORD"],
      :domain => 'thefailureproject.org'
    }
 

@@ -42,6 +42,8 @@ $z-depth-5: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 ------------BASICS-------------
 -----------------------------*/
 
+body { height: 100%; }
+.non-footer { min-height: calc(100vh - 566px); }
 
 
 
@@ -277,7 +279,6 @@ p a:hover { color: $color-red-dark; }
 ----------HOMEPAGE------------
 -----------------------------*/
 
-body { height: 100%; }
 .hero {
   height: 50%;
   background-position: center;
