@@ -39,8 +39,7 @@ Rails.application.configure do
      :authentication => :plain,
      :user_name => Rails.application.credentials.dig(:user_name),
      :password => Rails.application.credentials.dig(:password),
-     :domain => 'thefailureproject.org',
-     :enable_starttls_auto => true
+     :domain => 'thefailureproject.org'
    }
 
    config.action_mailer.delivery_method = :smtp

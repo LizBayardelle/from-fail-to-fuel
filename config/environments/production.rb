@@ -19,8 +19,7 @@ Rails.application.configure do
     :authentication => :plain,
     :user_name => 'apikey',
     :password => <%= ENV["SENDGRID_PASSWORD"] %>,
-    :domain => 'thefailureproject.org',
-    :enable_starttls_auto => true
+    :domain => 'thefailureproject.org'
   }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options ={:host => 'thefailureproject.org', :protocol => 'https'}

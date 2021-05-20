@@ -277,10 +277,12 @@ p a:hover { color: $color-red-dark; }
 ----------HOMEPAGE------------
 -----------------------------*/
 
+body { height: 100%; }
 .hero {
-  width: 100%;
-  display: block;
-  height: 5000px
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #steps {
