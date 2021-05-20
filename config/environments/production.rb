@@ -13,8 +13,18 @@ Rails.application.configure do
   config.eager_load = true
 
   # For Devise
-  config.action_mailer.default_url_options = { :host => "http://www.thefailureproject.org" }
-  config.action_mailer.smtp_settings = { address: "http://www.thefailureproject.org" }
+  ActionMailer::Base.smtp_settings = {
+    :address => 'smtp.sendgrid.net',
+    :port => '587',
+    :authentication => :plain,
+    :user_name => 'apikey',
+    :password => <%= ENV["SENDGRID_PASSWORD"] %>,
+    :domain => 'thefailureproject.org',
+    :enable_starttls_auto => true
+  }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options ={:host => 'thefailureproject.org', :protocol => 'https'}
+
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false

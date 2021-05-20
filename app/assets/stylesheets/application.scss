@@ -277,7 +277,15 @@ p a:hover { color: $color-red-dark; }
 ----------HOMEPAGE------------
 -----------------------------*/
 
+.hero {
+  width: 100%;
+  display: block;
+  height: 5000px
+}
 
+#steps {
+  background: url('https://s3.console.aws.amazon.com/s3/object/thefailureproject?region=us-west-1&prefix=111+-+Site+Images/Steps.jpg') cover;
+}
 
 
 
