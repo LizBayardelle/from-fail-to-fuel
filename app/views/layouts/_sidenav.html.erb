@@ -9,8 +9,8 @@
     <%= link_to "Home", home_index_path, class: "list-group-item list-group-item-action bg-light" %>
     <%= link_to "Why Study Failure?", page_path("failure"), class: "list-group-item list-group-item-action bg-light" %>
     <%= link_to "About <em>The Failure Project</em>".html_safe, page_path("failure"), class: "list-group-item list-group-item-action bg-light" %>
-    <a href="#" class="list-group-item list-group-item-action bg-light">The Research</a>
-    <a href="#" class="list-group-item list-group-item-action bg-light">Failproof Yourself</a>
+    <%= link_to "The Research", page_path("coming_soon"), class: "nav-link" %>
+    <%= link_to "Failproof Yourself", page_path("coming_soon"), class: "nav-link" %>
     <% if !current_user %>
       <%= link_to new_user_registration_path, class: "list-group-item list-group-item-action bg-light" do %>
         Create an Account
