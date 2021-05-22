@@ -3,7 +3,7 @@
   <head>
     <title>
       <%= if content_for?(:title) then yield(:title) + ' | ' end %>
-      Fail to Fuel
+      The Failure Project
     </title>
     <%= if content_for?(:head) then yield(:head) end %>
     <%= csrf_meta_tags %>
@@ -17,7 +17,12 @@
     <!-- reCAPTCHA -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-    <!-- favicons -->
+    <!-- OG Data -->
+    <meta property="og:url" content="http://www.thefailureproject.org" />
+    <meta property="og:title" content="The Failure Project" />
+    <meta property="og:description" content="Use your failures to create success." />
+    <meta property="og:image" content="https://thefailureproject.s3-us-west-1.amazonaws.com/111+-+Site+Images/Simple.jpg" />
+
 
   </head>
 
